@@ -1,0 +1,1 @@
+export { bufferToDataURI } from './upload'
