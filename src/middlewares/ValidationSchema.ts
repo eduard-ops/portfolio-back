@@ -16,14 +16,18 @@ export class ValidationSchema {
             })
 
             if (errors.length > 0) {
-                const errorMessages = errors.map((error) => {
-                    const constraints = Object.values(
-                        error.constraints || {}
-                    ).join(', ')
-                    return `${constraints}`
-                })
+                const [errorMessages] = errors
+                    .map((error) => {
+                        const constraints = Object.values(
+                            error.constraints || {}
+                        )
+                        return constraints
+                    })
+                    .flat()
 
-                const err = new HttpError(400, errorMessages[0])
+                console.log(errorMessages)
+
+                const err = new HttpError(400, errorMessages)
 
                 next(err)
             }

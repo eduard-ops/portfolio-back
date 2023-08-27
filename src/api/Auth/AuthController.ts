@@ -36,7 +36,7 @@ export default class AuthController {
     @Post('/signup')
     @HttpCode(201)
     @UseBefore(ValidationSchema.validation(AuthRegister))
-    async signup(@Body() body: IAuth) {
+    async signup(@Body() body: AuthRegister) {
         const { name, email, password } = body
         const find = await this.service.findByEmail(email)
 
