@@ -45,7 +45,7 @@
         "@typescript-eslint/eslint-plugin": "^5.59.11",
         "@typescript-eslint/parser": "^5.59.11",
         "eslint-plugin-promise": "^6.1.1",
-        "husky": "^8.0.0",
+        "husky": "^8.0.2",
         "nodemon": "^2.0.22",
         "ts-node": "^10.9.1",
         "tsc-alias": "^1.8.6",
